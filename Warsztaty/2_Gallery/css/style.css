@@ -1,5 +1,7 @@
 .gallery ul {
     list-style: none;
+    height: 600px;
+    width:600px;
 }
 
 .gallery li {
@@ -9,6 +11,7 @@
 .gallery li img {
     width: 600px;
     height: 600px;
+    visibility: visible;
 }
 
 .fullScreen {
