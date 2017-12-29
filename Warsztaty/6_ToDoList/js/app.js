@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function(){
             buttonComplete.addEventListener('click', function (event){
                 if (li.style.backgroundColor==='red'){
                     li.style.backgroundColor='white';
+                    span.innerText ='Liczba pozostałych rzeczy do zrobienia : '+ ++clickCount;
 
                 }else{
                     li.style.backgroundColor='red';
