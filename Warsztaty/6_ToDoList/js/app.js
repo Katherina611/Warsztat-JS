@@ -32,12 +32,13 @@ document.addEventListener("DOMContentLoaded", function(){
             buttonComplete.innerText='Complete';
 
             buttonComplete.addEventListener('click', function (event){
-                if (li.style.backgroundColor==='red'){
-                    li.style.backgroundColor='white';
+                if (header1.style.color==='red'){
+                    header1.style.color='black';
                     span.innerText ='Liczba pozostałych rzeczy do zrobienia : '+ ++clickCount;
 
                 }else{
-                    li.style.backgroundColor='red';
+                    header1.style.color='red';
+                    li.classList.add('done');
                     span.innerText ='Liczba pozostałych rzeczy do zrobienia : '+ --clickCount;
                 }
             });
@@ -48,9 +49,10 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
     buttonRemove.addEventListener('click', function(event){
-        taskList.parentElement.removeChild(taskList);
-        clickCount=0;
-        span.innerText = 'Liczba pozostałych rzeczy do zrobienia : ' + clickCount;
+        var listFinished = document.querySelectorAll('li.done');
+        for (var i = 0; i < listFinished.length; i++) {
+            listFinished[i].parentElement.removeChild(listFinished[i]);
+        }
 
     });
     console.log(input);
