@@ -35,5 +35,4 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     });
 //Na stronie mozna byłoby dodać slider, żeby nie musieć cały czas zamykać okna, by wyświetlić kolejny obraz//
-
 });
